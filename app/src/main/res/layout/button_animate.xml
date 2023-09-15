@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@+id/btn_item"
+        android:layout_height="wrap_content"
+
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:background="@drawable/bg_gradient_noti"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"> <!-- Center the ProgressBar elements vertically -->
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/progressBar"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:max="100"
+                android:min="0"
+                android:progress="10"
+                android:progressDrawable="@drawable/overlay_left_progress_drawable"
+                android:progressTint="#50ffffff"
+                android:rotation="180" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:foregroundTint="@color/design_default_color_background"
+                android:id="@+id/progressBar1"
+                android:layout_gravity="left"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:max="100"
+                android:min="0"
+                android:progress="10"
+                android:progressDrawable="@drawable/overlay_right_progress_drawable"
+                android:progressTint="#50ffffff" />
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="wrap_content"
+            android:text="Try now"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</merge>
