@@ -13,64 +13,12 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-
-
-
-
-
-
-    <RelativeLayout
+    <include
+        android:id="@+id/btn_continue"
+        layout="@layout/button_animate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_12sdp">
-
-        <LinearLayout
-            android:background="@drawable/bg_gradient_noti"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:weightSum="2"> <!-- Center the ProgressBar elements vertically -->
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_weight="1"
-                android:max="100"
-                android:min="0"
-                android:progress="10"
-                android:progressDrawable="@drawable/overlay_left_progress_drawable"
-                android:progressTint="#50ffffff"
-                android:rotation="180" />
-
-            <ProgressBar
-                android:id="@+id/progressBar1"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_gravity="left"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_weight="1"
-                android:foregroundTint="@color/design_default_color_background"
-                android:max="100"
-                android:min="0"
-                android:progress="10"
-                android:progressDrawable="@drawable/overlay_right_progress_drawable"
-                android:progressTint="#50ffffff" />
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="Try now"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_13sdp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+        android:layout_margin="@dimen/_12sdp" />
 
 
 </LinearLayout>

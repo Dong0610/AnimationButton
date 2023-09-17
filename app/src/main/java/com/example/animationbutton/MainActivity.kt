@@ -1,8 +1,6 @@
 package com.example.animationbutton
 
 import android.Manifest
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -13,19 +11,17 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.animation.LinearInterpolator
-import android.widget.ProgressBar
 import android.widget.RemoteViews
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.example.animationbutton.databinding.ActivityMain2Binding
+import com.example.animationbutton.databinding.ActivityMainBinding
 
-class MainActivity2 : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     val binding by lazy {
-        ActivityMain2Binding.inflate(layoutInflater)
+        ActivityMainBinding.inflate(layoutInflater)
     }
     private var notificationId = 1 // Unique ID for the notification
     private lateinit var notificationLayout: RemoteViews
@@ -110,7 +106,7 @@ class MainActivity2 : AppCompatActivity() {
     }
     private fun createCustomNotificationLayout(@LayoutRes layoutResId: Int): RemoteViews {
         val remoteViews = RemoteViews(packageName, layoutResId)
-        val intent = Intent(this, MainActivity2::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         val pendingIntent = PendingIntent.getActivity(
             this,
